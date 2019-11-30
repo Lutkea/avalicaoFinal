@@ -1,0 +1,40 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CadastrarDivida",
+            "request": "launch",
+            "mainClass": "CadastrarDivida"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Menu2",
+            "request": "launch",
+            "mainClass": "Menu2"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Menu",
+            "request": "launch",
+            "mainClass": "Menu"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - JButtonExemplo",
+            "request": "launch",
+            "mainClass": "JButtonExemplo"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ConsultarPessoas",
+            "request": "launch",
+            "mainClass": "ConsultarPessoas"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Geral",
+            "request": "launch",
+            "mainClass": "Geral"
+        }
+    ]
+}
