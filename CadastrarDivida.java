@@ -1,5 +1,10 @@
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class CadastrarDivida extends JFrame {
 
@@ -18,7 +23,7 @@ public class CadastrarDivida extends JFrame {
     JButton buttonGravar = new JButton("Gravar");
 
 
-    JComboBox comboMes = new JComboBox();
+    JComboBox<String> comboMes = new JComboBox<>();
 
     public CadastrarDivida(){
         Container pane = this.getContentPane();
@@ -54,14 +59,25 @@ public class CadastrarDivida extends JFrame {
         pane.add(textDesconto);
 
         pane.add(buttonGravar);
+
+        ActionListener handlerAction = new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == buttonGravar) {
+                    handleAction();
+                }
+            }
+        };
+        buttonGravar.addActionListener(handlerAction);
+    
         
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(400,500);
+        
+        this.setSize(300,280);
         this.setResizable(false);
         this.setVisible(true);
     }
+    private void handleAction() {
+        Divida divida = new Divida(mes, ano, valor, pessoas_id, percentualDesconto)
+     
 
-    public static void main(String[] args){
-        CadastrarDivida divida = new CadastrarDivida();
-    }
+}
 }

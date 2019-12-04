@@ -1,5 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Menu extends JFrame {
 
@@ -22,12 +24,36 @@ public class Menu extends JFrame {
         pane.add(button5);
         pane.add(button6);
 
+        ActionListener handlerAction = new ActionListener(){
+            public void actionPerformed(ActionEvent e){
+                if(e.getSource() == button1){
+                    new CadastrarPessoa();
+                }if(e.getSource() == button2){
+                    new CadastrarDivida();
+                }if(e.getSource() == button3){
+                    new CadastrarProvento();
+                }if(e.getSource() == button4){
+                    new ConsultarPessoas();
+                }if(e.getSource() == button5){
+                    new ConsultarDivida();
+                }else if(e.getSource() == button6){
+                    new ConsultarProvento();  
+                }
+                }
+
+            
+        };
+        button1.addActionListener(handlerAction);
+        button2.addActionListener(handlerAction);
+        button3.addActionListener(handlerAction);
+        button4.addActionListener(handlerAction);
+        button5.addActionListener(handlerAction);
+        button6.addActionListener(handlerAction);
+
+        
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(200,250);
         this.setVisible(true);
-    }
 
-    public static void main(String[] args){
-        Menu janela = new Menu();
     }
 }

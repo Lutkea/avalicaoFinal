@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Conexao",
+            "request": "launch",
+            "mainClass": "Conexao",
+            "projectName": "avalicaoFinal_4df42598"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ConsultarProvento",
+            "request": "launch",
+            "mainClass": "ConsultarProvento",
+            "projectName": "avalicaoFinal_4df42598"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Cadastro",
+            "request": "launch",
+            "mainClass": "Cadastro",
+            "projectName": "avalicaoFinal_4df42598"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ConsultarDivida",
+            "request": "launch",
+            "mainClass": "ConsultarDivida",
+            "projectName": "avalicaoFinal_4df42598"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CadastrarProvento",
+            "request": "launch",
+            "mainClass": "CadastrarProvento",
+            "projectName": "avalicaoFinal_4df42598"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CadastrarPessoa",
+            "request": "launch",
+            "mainClass": "CadastrarPessoa",
+            "projectName": "avalicaoFinal_4df42598"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - CadastrarDivida",
             "request": "launch",
             "mainClass": "CadastrarDivida"

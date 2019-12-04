@@ -1,32 +1,46 @@
 import javax.swing.*;
 import java.awt.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ConsultarPessoas extends JFrame {
 
-    public ConsultarPessoas(){
+    private JTextArea textArea2 = new JTextArea(10, 30);
 
-        JLabel nameLabel = new JLabel("Nome");
-        JLabel emailJLabel = new JLabel("email");
-
-        JTextField textNome = new JTextField(25);
-        JTextField textEmail = new JTextField(25);
+    public ConsultarPessoas() {
 
         Container pane = this.getContentPane();
-        pane.setLayout(new GridLayout(4,3));
+        pane.setLayout(new FlowLayout(FlowLayout.CENTER));
 
-        pane.add(nameLabel);
-        pane.add(textNome);
+        pane.add(textArea2);
+        textArea2.setText(selectPeople());
 
-        pane.add(emailJLabel);
-        pane.add(textEmail);
-
-        this.setSize(300,100);
+        this.setSize(360, 320);
         this.setVisible(true);
 
     }
 
-    public static void main(String[] args) {
-        ConsultarPessoas consulta = new ConsultarPessoas();
+    private String selectPeople() {
+        Connection conexao;
+        String ret = "";
+        try {
+            conexao = Conexao.getConnection();
+
+            String sql = "SELECT * FROM pessoas";
+            Statement estado = conexao.createStatement();
+            ResultSet resultados = estado.executeQuery(sql);
+        
+            while(resultados.next()){
+                ret += "Nome: " + resultados.getString("nome") + "\nEmail: " + resultados.getString("email") + "\n";
+            }
+            conexao.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return ret;
     }
 
 }
