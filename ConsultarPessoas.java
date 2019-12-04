@@ -17,7 +17,7 @@ public class ConsultarPessoas extends JFrame {
         pane.add(textArea2);
         textArea2.setText(selectPeople());
 
-        this.setSize(360, 320);
+        this.setSize(300, 300);
         this.setVisible(true);
 
     }

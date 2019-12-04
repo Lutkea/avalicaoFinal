@@ -37,7 +37,7 @@ public class ConsultarProvento extends JFrame {
         pane.add(labelImposto);
         pane.add(textImposto);
 
-        this.setSize(220,100);
+        this.setSize(270,200);
         this.setVisible(true);
 
     }

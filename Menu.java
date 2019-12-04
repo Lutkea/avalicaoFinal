@@ -9,7 +9,7 @@ public class Menu extends JFrame {
     JButton button2 = new JButton("Cadastrar Divida");
     JButton button3 = new JButton("Cadastrar Provento");
     JButton button4 = new JButton("Consultar Pessoa");
-    JButton button5 = new JButton("Consular Divida");
+    JButton button5 = new JButton("Consultar Divida");
     JButton button6 = new JButton("Consultar Provento");
 
     public Menu() {

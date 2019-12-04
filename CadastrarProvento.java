@@ -59,4 +59,9 @@ public class CadastrarProvento extends JFrame {
         this.setResizable(false);
         this.setVisible(true);
     }
+
+    private void handleAction() {
+        Proventos provento = new Proventos();                
+      }
+  
 }

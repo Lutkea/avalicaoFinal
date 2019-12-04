@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class CadastrarDivida extends JFrame {
 
     JLabel labelPessoa = new JLabel("Pessoa:");
-    JLabel labelmes = new JLabel("Informe o mes:");
+    JLabel labelMes = new JLabel("Informe o mes:");
     JLabel labelAno = new JLabel("Informe o Ano:");
     JLabel labelValor = new JLabel("Valor:");
     JLabel labelDesconto = new JLabel("Desconto:");
@@ -68,16 +68,15 @@ public class CadastrarDivida extends JFrame {
             }
         };
         buttonGravar.addActionListener(handlerAction);
-    
-        
         
         this.setSize(300,280);
         this.setResizable(false);
         this.setVisible(true);
     }
+    //meus pensamentos já estão confusos aqui
+
     private void handleAction() {
-        Divida divida = new Divida(mes, ano, valor, pessoas_id, percentualDesconto)
-     
+        Divida cadastrodivida = new Divida(textMes.getText(), textAno.getText(), textValor.getText(), textPessoa.getText(), textpercentualDesconto.getText());
 
 }
 }
